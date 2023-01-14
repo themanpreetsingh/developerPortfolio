@@ -845,6 +845,12 @@ ul.icons li .icon:before {
     height: 20em;
   }
   /* Header */
+  #close {
+    position: absolute;
+    right: 0;
+    padding: 0.8rem;
+    cursor: pointer;
+  }
   #header {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
