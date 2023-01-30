@@ -4,21 +4,21 @@ const navBarLinks = Array.from(document.querySelectorAll('#nav a'));
 const sections = Array.from(document.querySelectorAll('#main section'));
 
 /** Toggle NavBar on small screens **/
-function toggleNav() {
-    document.body.classList.toggle('header-visible');
-    toggleBtn.classList.toggle('hide');
-    closeBtn.classList.toggle('hide');
-};
+    function toggleNav() {
+        document.body.classList.toggle('header-visible');
+        toggleBtn.classList.toggle('hide');
+        closeBtn.classList.toggle('hide');
+    };
 
-toggleBtn.addEventListener('click', toggleNav);
+    toggleBtn.addEventListener('click', toggleNav);
 
-closeBtn.addEventListener('click', toggleNav);
+    closeBtn.addEventListener('click', toggleNav);
 
 /**Highlight the section name in nav bar for the open section**/
 
     //Takes a section as input and returns the corresponding link in navBar
     function getLinkForSection(section) {
-        return navBarLinks.filter(link => link.getAttribute("href") === ("#" + section.getAttribute("id")))[0];
+        return navBarLinks.find(link => link.getAttribute("href") === ("#" + section.getAttribute("id")));
     }
 
     //options for observer 
@@ -42,10 +42,11 @@ closeBtn.addEventListener('click', toggleNav);
     })
   
 
-// Highlight the link clicked by user
-navBarLinks.forEach( link => link.addEventListener('click', (eventDetails) => switchActiveLink(eventDetails.target)));
-function switchActiveLink(selectedLink) {
-    const currentlyActive = navBarLinks.filter( link => link.classList.contains('active') )[0]; 
-    currentlyActive.classList.remove('active');
-    selectedLink.classList.add('active');
-}
+/**  Highlight the link clicked by user **/
+    navBarLinks.forEach( link => link.addEventListener('click', (eventDetails) => switchActiveLink(eventDetails.target)));
+
+    function switchActiveLink(selectedLink) {
+        const currentlyActive = navBarLinks.find( link => link.classList.contains('active') ); 
+        currentlyActive.classList.remove('active');
+        selectedLink.classList.add('active');
+    }
