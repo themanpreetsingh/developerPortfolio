@@ -713,6 +713,15 @@ ul.icons li .icon:before {
   background: #71d6bb !important;
 }
 
+/* Contact List*/
+.contact-list {
+  list-style-type: none;
+}
+
+.contact-list span {
+  margin-left: 1em;
+}
+
 /* Wrapper */
 #wrapper {
   background: #fff;
