@@ -80,6 +80,11 @@ a:hover {
   color: #4acaa8 !important;
 }
 
+a .link:hover {
+  border-bottom-color: transparent;
+  color: #4acaa8 !important;
+}
+
 strong, b {
   color: #777;
   font-weight: 700;

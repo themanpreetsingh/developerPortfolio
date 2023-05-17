@@ -101,6 +101,11 @@
 			border-bottom-color: transparent;
 			color: _palette(accent1, bg) !important;
 		}
+
+		.link:hover {
+			border-bottom-color: transparent;
+			color: _palette(accent1, bg) !important;
+		}
 	}
 
 	strong, b {
